@@ -25,18 +25,11 @@ class MyApplication(Wt.WApplication):
     def __init__(self, env):
         Wt.WApplication.__init__(self, env)
         self.setTitle("experimental")
-        #
         Wt.WText("Populate a combo box with a list of available grass commands and parse the User Interface of each command, this action requires few seconds to be executed and is just an example on how to parse and capture the user interface xml description", Wt.PlainText, self.root())
         Wt.WBreak(self.root())
 
         container = Wt.WContainerWidget(self.root())
-        #container.resize(100, 100)
         grid = Wt.WGridLayout(container)
-        #for c in range(0, 22):
-        #    grid.setColumnStretch(c, 0)
-        #    grid.setRowStretch(c, 0)
-        #grid.setHorizontalSpacing(0)
-        #grid.setColumnResizable(0)
         container.setLayout(grid)
 
         self.cmdescbutton = Wt.WPushButton("get command list", self.root())
